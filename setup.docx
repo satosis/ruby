@@ -1,0 +1,5 @@
+Genrate controller: rails g controller + ten controller
+migrate db: rake db:migrate
+rollback db: rake db:rollback
+create model: rails g model + ten model + field:value
+clear cache: rake tmp:cache:clear

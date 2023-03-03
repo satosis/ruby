@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  c_name: MyString
+  c_slug: MyString
+  c_cate: MyString
+
+two:
+  c_name: MyString
+  c_slug: MyString
+  c_cate: MyString

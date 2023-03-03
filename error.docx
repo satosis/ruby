@@ -1,0 +1,12 @@
+Bug:
++ Run CMD "bundle install" => An error occurred while installing mysql2 (0.5.5), and Bundler cannot continue. mysql2
+Fix:
++ Run CMD
+ - gem install mysql2 --platform=ruby -- --with-mysql-dir=C:/Ruby32-x64/msys64/mingw64
+ - bundle install
+Docs: https://github.com/brianmario/mysql2/issues/1210
+
+Bug:
++ Run CMD "rails server" => A server is already running. Check C:/ruby/blog/tmp/pids/server.pid
+Fix:
+Delete file C:/ruby/blog/tmp/pids/server.pid and run CMD again

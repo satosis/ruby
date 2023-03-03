@@ -1,15 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  al_name: MyString
+  al_slug: MyString
   product_id: 1
-  order_id: 1
-  unit_price: 1.5
-  quantity: 1
-  total_price: 1.5
 
 two:
+  al_name: MyString
+  al_slug: MyString
   product_id: 1
-  order_id: 1
-  unit_price: 1.5
-  quantity: 1
-  total_price: 1.5

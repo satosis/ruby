@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  a_name: MyString
+  a_slug: MyString
+  a_hot: 1
+  a_active: 1
+  a_menu_id: MyString
+  a_view: 1
+  a_description: MyText
+  a_avatar: MyText
+  a_content: MyText
+  _wysihtml5_mode: 1
+
+two:
+  a_name: MyString
+  a_slug: MyString
+  a_hot: 1
+  a_active: 1
+  a_menu_id: MyString
+  a_view: 1
+  a_description: MyText
+  a_avatar: MyText
+  a_content: MyText
+  _wysihtml5_mode: 1
