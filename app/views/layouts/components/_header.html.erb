@@ -3,30 +3,29 @@
 <head>
     <!--CSS-->
     <title>{{ $title_page ?? 'Đồng hồ Thụy Sỹ, đồng hồ nam, đồng hồ nữ chính hãng cao cấp' }}</title>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="{{ asset('view/css/display.min.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('view/css/chat.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('view/css/animate.min.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('view/js/owl.carousel.min.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('view/js/Lightbox/lightbox.min.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('view/js/slick/slick.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('view/css/Common.css') }}" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/css/display.min.css' %>" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/css/chat.css' %>" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/css/animate.min.css' %>" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/js/owl.carousel.min.css' %>" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/js/Lightbox/lightbox.min.css' %>" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/js/slick/slick.css' %>" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/css/Common.css' %>" rel="stylesheet"/>
     <!--CSS Responsive-->
-    <link href="{{ asset('view/css/css_rwd_common.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('view/css/css_rwd.min.css') }}" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/css/css_rwd_common.css' %>" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/css/css_rwd.min.css' %>" rel="stylesheet"/>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-    <link href="{{ asset('view/css/dqw.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('view/css/news_css_rwd.css') }}" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/css/dqw.css' %>" rel="stylesheet"/>
+    <link href="<%= asset_path '/view/css/news_css_rwd.css' %>" rel="stylesheet"/>
     <!-- toastr -->
-    <link rel="stylesheet" href="{{ asset('toastr/toastr.min.css') }}">
+    <link rel="stylesheet" href="<%= asset_path '/toastr/toastr.min.css' %>">
     <!-- jquery -->
-    <script src="{{ asset('view/js/jquery-1.9.1.min.js') }}"></script>
+    <script src="<%= asset_path '/view/js/jquery-1.9.1.min.js' %>"></script>
 
-    <script src="{{ asset('view/js/stv_new.js') }}"></script>
+    <script src="<%= asset_path '/view/js/stv_new.js' %>"></script>
     <link rel="shortcut icon" href="https://www.dangquangwatch.vn/view/favicon.ico" type="image/x-icon"/>
         <script>
-            var TYPE_MESSAGE = "{{session('toastr.type') }}";
-            var MESSAGE = "{{session('toastr.message') }}";
+            var TYPE_MESSAGE = "{{session('toastr.type' %>";
+            var MESSAGE = "{{session('toastr.message' %>";
 
         </script>
     <script>
@@ -74,9 +73,9 @@
 <div id="commonHead">
     <div class="wrp">
         <h1 class="textLeft dnTablet-l">Đồng hồ nam, Đẳng cấp thương hiệu</h1>
-        <form action="{{ route('get.product.index') }}" class="frmSearch" method="get">
+        <form action="{{ route('get.product.index' %>" class="frmSearch" method="get">
             <div class="flex">
-                <input type="text" name="keyword" id="keyword" value=<%= params[:keyword] %>
+                <input type="text" name="keyword" id="keyword" value="<%= params[:keyword] %>"
                        placeholder="Nhập từ khóa tìm kiếm..."/>
                 <button class="btnSearch"><i class="fa fa-search"></i></button>
             </div>
@@ -85,10 +84,10 @@
             @if (Auth::check())
                 <li><a href="{{ route('get.user.orders', ['status' => 0]) }}" title="Home">Đơn hàng</a></li>
                 <li><a href="{{ route('get.user.index')}}">{{Auth::user()->name}}</a></li>
-                <li><a href="{{ route('get.logout') }}">Đăng xuất</a></li>
+                <li><a href="{{ route('get.logout' %>">Đăng xuất</a></li>
             @else
-                <li><a href="{{ route('get.login') }}">Đăng nhập</a></li>
-                <li><a href="{{ route('get.register') }}">Đăng ký</a></li>
+                <li><a href="{{ route('get.login' %>">Đăng nhập</a></li>
+                <li><a href="{{ route('get.register' %>">Đăng ký</a></li>
             @endif
         </ul>
     </div>
@@ -96,7 +95,7 @@
 <div id="header">
     <div class="wrp">
         <a href="/" title="Home" class="logo">
-            <img src="{{ asset('view/img/logo.png') }}" alt="Logo" class="logo"/>
+            <img src="<%= asset_path '/view/img/logo.png' %>" alt="Logo" class="logo"/>
         </a>
         <div id="menuMain">
             <ul>
@@ -125,7 +124,7 @@
                             <div class="subMenu" style="width: 250px;">
                                 <div class="group">
                                     <div class="item">
-                                    <%= @categories.each do |category| %>
+                                    <% @categories.each do |category| %>
                                         <% if (category.c_cate == "glass") %>
                                                 <%= link_to category.c_name,"/category" %>
                                         <% end %>
@@ -143,7 +142,7 @@
                             <div class="subMenu" style="width: 250px;">
                                 <div class="group">
                                     <div class="item">
-                                    <%= @categories.each do |category| %>
+                                    <% @categories.each do |category| %>
                                         <% if (category.c_cate == "accessories") %>
                                                 <%= link_to category.c_name,"/category" %>
                                         <% end %>
@@ -159,7 +158,7 @@
         <div class="right">
             <a href="tel:18006005" class="item">
                 <span class="icon">
-                    <img src="{{ asset('view/img/hotline.png') }}" alt="Hotline"/>
+                    <img src="<%= asset_path '/view/img/hotline.png' %>" alt="Hotline"/>
                 </span>
                 <span class="text">
                     <span class="top">Hotline</span>

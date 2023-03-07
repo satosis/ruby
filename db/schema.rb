@@ -90,6 +90,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_063016) do
     t.integer "pro_sale", default: 0
     t.bigint "category_id"
     t.integer "pro_favourite", default: 0
+    t.string "pro_avatar"
     t.integer "pro_hot", default: 0
     t.integer "pro_active", default: 0
     t.bigint "admin_id"
@@ -99,6 +100,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_063016) do
     t.integer "pro_review_total", default: 0
     t.integer "pro_review_star", default: 5
     t.string "keywordseo"
+    t.string "_wysihtml5_mode"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["admin_id"], name: "index_products_on_admin_id"
