@@ -1,0 +1,41 @@
+<%= render "layouts/components/header" %>
+  <div class="container"><br>
+    <div class="login">
+      <h1 class=" text-center">ĐĂNG NHẬP BẰNG</h1><br><br>
+      <a href="http://127.0.0.1:8000/auth/redirect/facebook" class=" btn
+        btn-blue"><i class="fa fa-facebook-f mr-1"></i> FACEBOOK</a>
+      <a href="http://127.0.0.1:8000/auth/redirect/google" class=" btn btn-red">
+      <i class="fa fa-google"></i> GOOGLE</a><br>
+      <br>
+      <h1> HOẶC ĐĂNG NHẬP BẰNG</h1><br>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+       <% resource.errors.each do |key, value| %>
+        <div class="text-danger"><%= value %></div>
+      <% end %>
+      <div class="form-group ">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "user@gmail.com", class: "form-control" %>
+      </div>
+
+      <div class="form-group ">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+      <div class="">
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+        <%= link_to simple_format('<i class="fa fa-undo"></i> Quay lại'), '/', :class => "btn btn-danger" %>
+    <% end %>
+      </div>
+    <br>
+    <%= render "devise/shared/links" %>
+  </div>
+<%= render "layouts/components/footer" %>
