@@ -337,3 +337,31 @@ label {
 .text-danger {
     color: red;
 }
+.box-footer {
+    width: 100%;
+}
+
+.pagination.custom-pagination li{
+    padding: 0 5px;
+  }
+.pagination.custom-pagination .page-item {
+    color: #000000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #dee2e6;
+    font-size: 14px;
+    margin: 0 5px;
+}
+.pagination.custom-pagination .page-item.disabled {
+    color: #6c757d;
+}
+.page-item.active {
+    z-index: 3;
+    color: #fff !important;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.lstPrice .active {
+    color: #007bff;
+}

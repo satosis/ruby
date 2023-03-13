@@ -1,407 +1,81 @@
-<%= render 'layouts/components/header' %>
-<div id="product">
-        <div class="wrp">
-            <div id="filter">
-                <div class="order">
-                    <div class="price">
-                        <span>Giá: </span>
-                        <div class="lstPrice">
-                            <ul>
-                                <li class="">
-                                    <a href="http://localhost:8000/san-pham/dong-ho-epos-swiss-2?price=1 ">
-                                        Dưới 2 triệu
-                                    </a>
-                                </li>
+<%= render "layouts/components/header" %>
+  <div id="product">
+    <div class="wrp">
+      <div id="filter">
+        <div class="order">
+          <div class="price">
+            <span>Giá: </span>
+            <div class="lstPrice">
+              <ul>
+                <li class="<% if params['price'] == '1' %> active <% end %>">
+                  <%= link_to "Dưới 2 triệu", request.params.merge(price: 1) %>
+                </li>
 
-                                <li class="">
-                                    <a href="http://localhost:8000/san-pham/dong-ho-epos-swiss-2?price=2 ">
-                                        Từ 2 triệu - 5 triệu
-                                    </a>
-                                </li>
+                <li class="<% if params['price'] == '2' %> active <% end %>">
+                  <%= link_to "Từ 2 triệu - 5 triệu", request.params.merge(price: 2) %>
+                </li>
 
-                                <li class="">
-                                    <a href="http://localhost:8000/san-pham/dong-ho-epos-swiss-2?price=5 ">
-                                        Từ 5 triệu - 10 triệu
-                                    </a>
-                                </li>
+                <li class="<% if params['price'] == '3' %> active <% end %>">
+                  <%= link_to "Từ 5 triệu - 10 triệu", request.params.merge(price: 3) %>
+                </li>
 
-                                <li class="">
-                                    <a href="http://localhost:8000/san-pham/dong-ho-epos-swiss-2?price=10 ">
-                                        Từ 10 triệu - 25 triệu
-                                    </a>
-                                </li>
-
-
-                                <li class="">
-                                    <a href="http://localhost:8000/san-pham/dong-ho-epos-swiss-2?price=50 ">
-                                        Trên 50 triệu
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="function odering">
-                            <span class="openSubOrder">Sắp xếp <i class="fa fa-caret-down"></i></span>
-                            <div class="sub filter">
-                                <div class="group">
-                                    <ul>
-                                        <li>
-                                            <label class="active">
-                                                <span class="check"><i class="fa fa-check"></i></span>
-                                                <span><a href="#" title="San pham noi bat">Sản phẩm nổi bật</a></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="">
-                                                <span class="check"><i class="fa fa-check"></i></span>
-                                                <span><a href="http://localhost:8000/san-pham/dong-ho-epos-swiss-2?s=2" title="Thap den cao">Giá thấp đến cao</a></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="">
-                                                <span class="check"><i class="fa fa-check"></i></span>
-                                                <span><a href="http://localhost:8000/san-pham/dong-ho-epos-swiss-2?s=1" title="Cao xuong thap">Giá cao xuống thấp</a></span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="javascript://" class="closeSub"><i class="fa fa-times-circle"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="product">
-                <div class="group active">
-                                                                <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701209825-25" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__1367739457-dong-ho-chinh-hang-2.jpg" alt="Đồng hồ Epos Swiss E-7000.701.20.98.25" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__1367739457-dong-ho-chinh-hang-2.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701209825-25" class="name">Đồng hồ Epos Swiss E-7000.701.20.98.25</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">13,000,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 15%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-8000700226832-26" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__186594578-dong-ho-chinh-hang-62.jpg" alt="Đồng hồ Epos Swiss E-8000.700.22.68.32" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__186594578-dong-ho-chinh-hang-62.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-8000700226832-26" class="name">Đồng hồ Epos Swiss E-8000.700.22.68.32</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">19,900,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 17%"></div>
-            <span class="text">Còn lại 99</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701209525-27" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__1779327189-dong-ho-chinh-hang-65.jpg" alt="Đồng hồ Epos Swiss E-7000.701.20.95.25" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__1779327189-dong-ho-chinh-hang-65.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701209525-27" class="name">Đồng hồ Epos Swiss E-7000.701.20.95.25</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">13,000,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 56%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701221626-28" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__928364280-1702384644-e-7000701221626.jpg" alt="Đồng hồ Epos Swiss E-7000.701.22.16.26" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__928364280-1702384644-e-7000701221626.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701221626-28" class="name">Đồng hồ Epos Swiss E-7000.701.22.16.26</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">14,000,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 62%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701221525-29" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__460677088-e-7000701221525.jpg" alt="Đồng hồ Epos Swiss E-7000.701.22.15.25" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__460677088-e-7000701221525.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701221525-29" class="name">Đồng hồ Epos Swiss E-7000.701.22.15.25</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">14,000,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 11%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701209626-31" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__1125243076-dong-ho-chinh-hang-66.jpg" alt="Đồng hồ Epos Swiss E-7000.701.20.96.26" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__1125243076-dong-ho-chinh-hang-66.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701209626-31" class="name">Đồng hồ Epos Swiss E-7000.701.20.96.26</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">13,000,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 27%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-8000700228832-32" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__1328554038-dong-ho-chinh-hang-67.jpg" alt="Đồng hồ Epos Swiss E-8000.700.22.88.32" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__1328554038-dong-ho-chinh-hang-67.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-8000700228832-32" class="name">Đồng hồ Epos Swiss E-8000.700.22.88.32</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">22,800,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 27%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3420152221615-33" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__2144894182-e-3420152221615.jpg" alt="Đồng hồ Epos Swiss E-3420.152.22.16.15" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__2144894182-e-3420152221615.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3420152221615-33" class="name">Đồng hồ Epos Swiss E-3420.152.22.16.15</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">32,100,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 62%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3390156222032-34" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__373860224-untitled-14.jpg" alt="Đồng hồ Epos Swiss E-3390.156.22.20.32" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__373860224-untitled-14.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3390156222032-34" class="name">Đồng hồ Epos Swiss E-3390.156.22.20.32</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">56,400,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 62%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-8000700226515-35" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__2015096233-dong-ho-chinh-hang-8.jpg" alt="Đồng hồ Epos Swiss E-8000.700.22.65.15" class="lazy" src="http://localhost:8000/uploads/2020/07/06/2020-07-06__2015096233-dong-ho-chinh-hang-8.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-8000700226515-35" class="name">Đồng hồ Epos Swiss E-8000.700.22.65.15</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">15,100,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 31%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3387152222832-36" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__364723213-untitled-56.jpg" alt="Đồng hồ Epos Swiss E-3387.152.22.28.32" class="lazy" src="/view/lazy.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3387152222832-36" class="name">Đồng hồ Epos Swiss E-3387.152.22.28.32</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">36,000,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 98%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3387152221632-37" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__2065350889-untitled-33.jpg" alt="Đồng hồ Epos Swiss E-3387.152.22.16.32" class="lazy" src="/view/lazy.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3387152221632-37" class="name">Đồng hồ Epos Swiss E-3387.152.22.16.32</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">36,000,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 15%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3401132225825-38" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__581788969-e-3401132225825.jpg" alt="Đồng hồ Epos Swiss E-3401.132.22.58.25" class="lazy" src="/view/lazy.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3401132225825-38" class="name">Đồng hồ Epos Swiss E-3401.132.22.58.25</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">32,100,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 22%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3420152221632-39" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__416029194-e-3420152221632.jpg" alt="Đồng hồ Epos Swiss E-3420.152.22.16.32" class="lazy" src="/view/lazy.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-3420152221632-39" class="name">Đồng hồ Epos Swiss E-3420.152.22.16.32</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">39,600,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 18%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                            <div class="item">
-    <div class="wImage">
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701221825-40" class="image">
-            <img data-src="http://localhost:8000/uploads/2020/07/06/2020-07-06__1560014040-anh-test5.jpg" alt="Đồng hồ Epos Swiss E-7000.701.22.18.25" class="lazy" src="/view/lazy.jpg">
-        </a>
-    </div>
-    <div class="info">
-        <p>40mm | 5ATM | Sapphire</p>
-        <a href="http://localhost:8000/sp/dong-ho-epos-swiss-e-7000701221825-40" class="name">Đồng hồ Epos Swiss E-7000.701.22.18.25</a>
-        <div style="display:flex">
-
-        </div>
-        <div class="price">
-            <p class="new">14,000,000 đ</p>
-        </div>
-        <div class="count">
-            <div class="bg" style="width: 65%"></div>
-            <span class="text">Còn lại 100</span>
-        </div>
-    </div>
-</div>                                        <div class="box-footer">
-                        <nav>
-        <ul class="pagination">
-
-                            <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
-                    <span class="page-link" aria-hidden="true">‹</span>
+                <li class="<% if params['price'] == '4' %> active <% end %>">
+                  <%= link_to "Từ 10 triệu - 25 triệu", request.params.merge(price: 4) %>
                 </li>
 
 
-
-
-
-                                                                                        <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-                                                                                                <li class="page-item"><a class="page-link" href="http://localhost:8000/san-pham/dong-ho-epos-swiss-2?page=2">2</a></li>
-
-
-                            <li class="page-item">
-                    <a class="page-link" href="http://localhost:8000/san-pham/dong-ho-epos-swiss-2?page=2" rel="next" aria-label="Next »">›</a>
+                <li class="<% if params['price'] == '5' %> active <% end %>">
+                  <%= link_to "Trên 50 triệu", request.params.merge(price: 5) %>
                 </li>
-                    </ul>
-    </nav>
 
-                    </div>
-                </div>
+                <li class="<% if params['sort'] == 'desc' %> active <% end %>">
+                  <%= link_to "Giá cao xuống thấp", request.params.merge(sort: 'desc') %>
+                </li>
 
+                <li class="<% if params['sort'] == 'asc' %> active <% end %>">
+                  <%= link_to "Giá thấp đến cao", request.params.merge(sort: 'asc') %>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="product">
+        <div class="group active">
+        <% if @products %>
+          <% @products.each do |product| %>
+            <div class="item">
+              <div class="wImage">
+                <a href="/products/<%=product.pro_slug%>"
+                  class="image">
+                  <img src="https://www.dangquangwatch.vn/upload/product_small/dong-ho-nu-thoi-trang-621305513.jpg">
+                </a>
+              </div>
+              <div class="info">
+                <p>40mm | 5ATM | Sapphire</p>
+                <%= link_to product.pro_name, product_path(product.pro_slug),slug: product.pro_slug, class: "name" %>
 
+                <div class="price">
+                  <p class="new"><%= number_to_currency(product.pro_price, unit: "") %> đ</p>
+                </div>
+                <div class="count">
+                  <div class="bg" style="width: 62%"></div>
+                  <span class="text">Còn lại <%= product.pro_amount %></span>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="text-center">
+            <%= image_tag("no_result.jpg") %>
+          </div>
+        <% end %>
+          <div class="box-footer">
+            <%= will_paginate @products, renderer: @custom_renderer_paginate %>
+          </div>
+        </div>
+      </div>
     </div>
-<%= render 'layouts/components/footer' %>
+
+  </div>
+  <%= render "layouts/components/footer" %>

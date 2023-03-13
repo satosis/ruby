@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :category
   resources :products
   resources :order_items
+  post '/products/ajax_favourite/:id', to: 'products#favourite'
   # scope 'account' do
   #   get 'dashboard'
   # end

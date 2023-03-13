@@ -23,23 +23,6 @@
 
     <script src="<%= asset_path '/view/js/stv_new.js' %>"></script>
     <link rel="shortcut icon" href="https://www.dangquangwatch.vn/view/favicon.ico" type="image/x-icon"/>
-        <script>
-            var TYPE_MESSAGE = "{{session('toastr.type' %>";
-            var MESSAGE = "{{session('toastr.message' %>";
-
-        </script>
-    <script>
-        $(function () {
-            $(".js-login").on('click', function (event) {
-                event.preventDefault();
-                toastr.warning('Bạn cần đăng nhập');
-            })
-            $(window).bind("load", function () {
-                jQuery("#status").fadeOut();
-                jQuery("#loader").fadeOut();
-            });
-        })
-    </script>
 </head>
 
 <body>
@@ -73,7 +56,7 @@
 <div id="commonHead">
     <div class="wrp">
         <h1 class="textLeft dnTablet-l">Đồng hồ nam, Đẳng cấp thương hiệu</h1>
-        <form action="{{ route('get.product.index' %>" class="frmSearch" method="get">
+        <form action="/category" class="frmSearch" method="get">
             <div class="flex">
                 <input type="text" name="keyword" id="keyword" value="<%= params[:keyword] %>"
                        placeholder="Nhập từ khóa tìm kiếm..."/>
@@ -164,7 +147,7 @@
         <div class="right">
             <a href="tel:18006005" class="item">
                 <span class="icon">
-                    <img src="<%= asset_path '/view/img/hotline.png' %>" alt="Hotline"/>
+                    <%= image_tag 'hotline.png'%>
                 </span>
                 <span class="text">
                     <span class="top">Hotline</span>
